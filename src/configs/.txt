@@ -1,0 +1,1 @@
+Bu papkamizda loyihaga tegishli bolgan    m: {api BaseUrl: 'https://api.example.com'}
