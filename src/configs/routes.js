@@ -1,0 +1,58 @@
+import React from "react";
+
+export const authRoutes=[
+    {
+        key:"register",
+        path:"/register",
+        component:React.lazy(()=>import('../pages/auth/registr'))
+    },
+    {
+        key:"login",
+        path:"/login",
+        component:React.lazy(()=>import('../pages/auth/login'))
+    },
+];
+export const protectedRoutes=[
+    {
+        key:"home",
+        path:"/",
+        authority:["admin","user"],
+        component:React.lazy(()=>import('../pages/private/home'))
+    },
+    {
+        key:"books",
+        path:"/books",
+        authority:["admin","user"],
+        component:React.lazy(()=>import('../pages/private/books'))
+    },
+    {
+        key:"profile",
+        path:"/profile",
+        authority:["admin","user"],
+        component:React.lazy(()=>import('../pages/private/profile'))
+    },
+    {
+        key:"security",
+        path:"/security",
+        authority:["admin","user"],
+        component:React.lazy(()=>import('../pages/profile/security'))
+    },
+    {
+        key:"settings",
+        path:"/settings",
+        authority:["admin","user"],
+        component:React.lazy(()=>import('../pages/profile/settings'))
+    },
+    {
+        key:"create-book",
+        path:"/create-book",
+        authority:["admin","user"],
+        component:React.lazy(()=>import('../pages/create/create-book'))
+    },
+    {
+        key:"create-author",
+        path:"/create-author",
+        authority:["admin","user"],
+        component:React.lazy(()=>import('../pages/create/create-author'))
+    },
+];
